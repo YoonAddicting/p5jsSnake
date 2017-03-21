@@ -26,7 +26,6 @@ function draw() {
     
     if (snake.eat(food)) {
         pickLocation();
-        
     };
     
     fill(255, 0, 100);
