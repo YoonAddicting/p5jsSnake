@@ -2,7 +2,7 @@
 
 var snake;
 var scl = 20;
-var speed = 15;
+var speed = 10;
 
 function setup() {
     createCanvas(800,800);
@@ -98,7 +98,10 @@ function Snake() {
         for (var i = 0; i < this.tail.length; i++) {
             rect(this.tail[i].x, this.tail[i].y, scl, scl);
         }
-        rect(this.x,this.y,scl,scl)
+        rect(this.x,this.y,scl,scl);
+        textSize(16);
+        text("Score: " + snake.total*10,10,30);
+
     }
 }
 
