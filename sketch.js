@@ -72,11 +72,14 @@ function Snake() {
             var pos = this.tail[i];
             var d = dist(this.x, this.y, pos.x, pos.y);
             if (d < 1) {
+                // Stuff to do when dying
                 this.total = 0;
                 this.tail = [];
                 this.x=width/2;
                 this.y=height/2;
                 this.dir(0,0);
+                // https://www.w3schools.com/js/js_cookies.asp
+                // Check if any cookie is set, if not, set one, if one is set, load it, compare the score of the cookie to the score of the current game, and save the highest value to the cookie.
             }
         }
     }
