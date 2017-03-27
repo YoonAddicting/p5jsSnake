@@ -74,6 +74,9 @@ function Snake() {
             if (d < 1) {
                 this.total = 0;
                 this.tail = [];
+                this.x=width/2;
+                this.y=height/2;
+                this.dir(0,0);
             }
         }
     }
