@@ -66,9 +66,12 @@ function Snake() {
     this.xspeed = 0;
     this.yspeed = 0;
     this.total = 0;
+    this.played = 0;
+    this.gameText = "";
     this.tail = [];
     
     this.dir = function(x, y) {
+        this.played = 1;
         this.xspeed = x;
         this.yspeed = y;
     }
@@ -94,6 +97,7 @@ function Snake() {
                 this.x=width/2;
                 this.y=height/2;
                 this.dir(0,0);
+                this.played = 2;
                 // https://www.w3schools.com/js/js_cookies.asp
                 // Check if any cookie is set, if not, set one, if one is set, load it, compare the score of the cookie to the score of the current game, and save the highest value to the cookie.
             }
@@ -113,6 +117,13 @@ function Snake() {
         
         this.x = constrain(this.x,0,width-scl);
         this.y = constrain(this.y,0,height-scl);
+        if (this.played == 0) {
+          this.gameText = "Welcome! Press an arrow key to begin!";
+        } else if (this.played == 1) {
+          this.gameText = "";
+        } else if (this.played == 2) {
+          this.gameText = "GAME OVER - Press an arrow key to try again!";
+        }
     }
     
     this.show = function() {
@@ -122,8 +133,10 @@ function Snake() {
         }
         rect(this.x,this.y,scl,scl);
         textSize(16);
+        textAlign(LEFT);
         text("Score: " + snake.total*10,10,30);
-
+        textAlign(CENTER);
+        text(this.gameText,width/2,height/2-300);
     }
 }
 
