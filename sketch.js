@@ -2,6 +2,7 @@
 
 var snake;
 var crunch;
+var volSlider;
 var scl = 20;
 var speed = 10;
 
@@ -12,6 +13,8 @@ function preload() {
 function setup() {
     createCanvas(800,800);
     snake =  new Snake();
+    var volControls = document.getElementById("volControls");
+    volSlider = createSlider(0,1,0.5,0.01).id("volSlider").parent("volControls");
     frameRate(15);
     pickLocation();
 }
@@ -35,6 +38,7 @@ function draw() {
     
     fill(255, 0, 100);
     rect(food.x,food.y,scl,scl);
+    crunch.setVolume(volSlider.value());
 }
 
 function keyPressed() {
