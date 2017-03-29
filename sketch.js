@@ -1,8 +1,13 @@
 // https://www.youtube.com/watch?v=AaGK-fj-BAM
 
 var snake;
+var crunch;
 var scl = 20;
 var speed = 10;
+
+function preload() {
+    crunch = loadSound("crunch.mp3");
+}
 
 function setup() {
     createCanvas(800,800);
@@ -80,6 +85,8 @@ function Snake() {
         var d = dist(this.x, this.y, pos.x, pos.y);
         if (d < 1) {
             this.total ++;
+            crunch.setVolume(0.1);
+            crunch.play();
             return true;
         } else {
             return false;
@@ -139,4 +146,3 @@ function Snake() {
         text(this.gameText,width/2,height/2-300);
     }
 }
-
