@@ -4,6 +4,6 @@
 - Save highscore
 - Wall around border
 - Speed up with more food?
-- Menu
++ Menu
 - Music and sound effects
 
