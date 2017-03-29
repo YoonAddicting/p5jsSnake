@@ -1,6 +1,5 @@
-
 # TODO
-- Prevent going backwards
++ Prevent going backwards
 + Reset to middle if die
 - Save highscore
 - Wall around border
