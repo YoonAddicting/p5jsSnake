@@ -150,3 +150,47 @@ function Snake() {
         text(this.gameText,width/2,height/2-300);
     }
 }
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  //Example cookie: "Username=Jonas; expires=someUTCDate; path=/;"
+  //cname=Username
+    var name = cname + "=";
+  //name=Username=
+    var decodedCookie = decodeURIComponent(document.cookie);
+  //decodedCookie=Username=Jonas;
+    var ca = decodedCookie.split(';');
+  //ca =[Username=Jonas]
+    for(var i = 0; i <ca.length; i++) {
+      // Defines c as i element in the array ca
+        var c = ca[i];
+      // Checks for space in front of element in array
+        while (c.charAt(0) == ' ') {
+          // If there's a space in front of element, define c as c without the first character (the space)
+            c = c.substring(1);
+        }
+      // if name is found starting at position 0, then return the substring between the end of "Username=" and the end of the string (at the length of c), also known as the value of the cookie.
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+
+// Function to check if cookie "hiScore" exists, and loads it, else creates it with value of 0.
+function checkCookie() {
+    var hiScore = getCookie("hiScore");
+    if (hiScore != "") {
+        getCookie(hiScore);
+    } else {
+        setCookie("hiScore", 0, 365);
+    }
+}
+
