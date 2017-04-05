@@ -35,13 +35,13 @@ h1 {
 #volText {
   position: absolute;
   left:-140px;
-  top:-90px;
+  top:-85px;
 }
 
 #volSlider {
   position: absolute;
   left:-75px;
-  top:-75px;
+  top:-70px;
 }
 
 #defaultCanvas0 {
