@@ -26,7 +26,7 @@ function pickLocation() {
 }
 
 function draw() {
-    background(50);
+    background(60);
     snake.death();
     snake.update();
     snake.show();
@@ -150,9 +150,10 @@ function Snake() {
         rect(this.x,this.y,scl,scl);
         this.textSize = 16;
         textSize(this.textSize);
+        textFont("Verdana");
         textAlign(LEFT);
         text("Score: " + this.total*10,10,30);
-        text("Hi-score: " + this.hiscore,width-110,30);
+        text("Hi-score: " + this.hiscore,width-120,30);
         textAlign(CENTER);
         text(this.gameText,width/2,height/2-300);
     }
