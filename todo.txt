@@ -2,7 +2,7 @@
 + Prevent going backwards
 + Reset to middle if die
 - Save highscore
-- Wall around border
++ Wall around border
 - Speed up with more food?
 + Menu
 - Music and sound effects
