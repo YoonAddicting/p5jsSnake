@@ -1,5 +1,3 @@
-// https://www.youtube.com/watch?v=AaGK-fj-BAM
-
 var snake;
 var crunch;
 var volSlider;
@@ -11,9 +9,9 @@ function preload() {
 
 function setup() {
     createCanvas(800,800);
-    snake =  new Snake;
     var volControls = document.getElementById("volControls");
-    volSlider = createSlider(0,1,0.5,0.01).id("volSlider").parent("volControls");
+    volSlider = createSlider(0,1,1,0.01).id("volSlider").parent("volControls");
+    snake =  new Snake;
     frameRate(15);
     pickLocation();
 }
