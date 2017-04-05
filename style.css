@@ -4,25 +4,25 @@
 }
 
 html, body {
-  height: 100%;
   background-color:#292929;
+  height: 100%;
 }
 
 body {
   /* This centers our contens vertically. */
   align-items: center;
+  color: white;
   display: flex;
+  font-family: ubuntu, sans-serif;
   /* This centers our sketch horizontally. */
   justify-content: center;
   margin: 0;
-  color: white;
-  font-family: ubuntu, sans-serif;
 }
 
 h1 {
   font-size: 48px;
-  position: absolute;
   left:auto;
+  position: absolute;
   top:-20px;
 }
 
@@ -33,14 +33,14 @@ h1 {
 }
 
 #volText {
-  position: absolute;
   left:-140px;
+  position: absolute;
   top:-85px;
 }
 
 #volSlider {
-  position: absolute;
   left:-75px;
+  position: absolute;
   top:-70px;
 }
 
