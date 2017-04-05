@@ -49,3 +49,14 @@ h1 {
   border-width: 2px;
   color: white;
 }
+
+#resetButtonDiv {
+  position: absolute;
+  top: 100%;
+  width: 200px;
+}
+
+#resetButton {
+  position: absolute;
+  top: -50px;
+}

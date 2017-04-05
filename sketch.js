@@ -2,6 +2,8 @@ var snake;
 var crunch;
 var volSlider;
 var scl = 20;
+var resetButton;
+var cookieReset = 0;
 
 function preload() {
   crunch = loadSound("crunch.mp3");
@@ -11,6 +13,9 @@ function setup() {
   createCanvas(800, 800);
   var volControls = document.getElementById("volControls");
   volSlider = createSlider(0, 1, 1, 0.01).id("volSlider").parent("volControls");
+  var resetButtonDiv = document.getElementById("resetButtonDiv");
+  resetButton = createButton('Reset hi-score').id("resetButton").parent("resetButtonDiv");
+  resetButton.mousePressed(deleteCookie);
   snake = new Snake;
   frameRate(15);
   pickLocation();
@@ -152,6 +157,9 @@ function Snake() {
     textFont("Verdana");
     textAlign(LEFT);
     text("Score: " + this.total * 10, 10, 30);
+    if (cookieReset == 1) {
+      this.hiscore = Cookies.get('hiScore');
+    }
     text("Hi-score: " + this.hiscore, width - 120, 30);
     textAlign(CENTER);
     text(this.gameText, width / 2, height / 2 - 300);
@@ -167,4 +175,9 @@ function checkCookie() {
     Cookies.set('hiScore', 0);
     return Cookies.get('hiScore');
   }
+}
+
+function deleteCookie() {
+  Cookies.set('hiScore',0);
+  cookieReset = 1;
 }
