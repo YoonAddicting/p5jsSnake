@@ -1,3 +1,8 @@
+@font-face {
+  font-family: ubuntu;
+  src: url('Ubuntu-R.ttf');
+}
+
 html, body {
   height: 100%;
   background-color:#292929;
@@ -36,7 +41,7 @@ h1 {
 #volSlider {
   position: absolute;
   left:-75px;
-  top:-79px;
+  top:-75px;
 }
 
 #defaultCanvas0 {
