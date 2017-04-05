@@ -4,5 +4,5 @@
 + Save highscore
 + Wall around border
 + Menu
-- Music and sound effects
++ Music and sound effects
 
