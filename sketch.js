@@ -4,7 +4,6 @@ var snake;
 var crunch;
 var volSlider;
 var scl = 20;
-var speed = 10;
 
 function preload() {
     crunch = loadSound("crunch.mp3");
