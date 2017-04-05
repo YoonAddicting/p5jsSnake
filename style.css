@@ -1,16 +1,46 @@
 html, body {
   height: 100%;
-  background-color:#474747;
+  background-color:#292929;
 }
 
 body {
-  /* This centers our sketch vertically. */
+  /* This centers our contens vertically. */
   align-items: center;
-
   display: flex;
-
   /* This centers our sketch horizontally. */
   justify-content: center;
-
   margin: 0;
+  color: white;
+  font-family: ubuntu, verdana;
+}
+
+h1 {
+  font-size: 48px;
+  position: absolute;
+  left:auto;
+  top:-20px;
+}
+
+#volControls {
+  font-size: 14px;
+  position: absolute;
+  top: 100%;
+}
+
+#volText {
+  position: absolute;
+  left:-140px;
+  top:-90px;
+}
+
+#volSlider {
+  position: absolute;
+  left:-75px;
+  top:-79px;
+}
+
+#defaultCanvas0 {
+  border-style: solid;
+  border-width: 2px;
+  color: white;
 }
