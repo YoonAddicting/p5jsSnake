@@ -1,5 +1,4 @@
 // Initializes the variables
-
 var snake;
 var crunch;
 var volSlider;
