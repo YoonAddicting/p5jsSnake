@@ -1,24 +1,26 @@
+/* Imports the font stored on the website.*/
 @font-face {
   font-family: ubuntu;
   src: url('Ubuntu-R.ttf');
 }
 
+/* Changes the background color of the body to #292929 and makes the body fill 100% of the page-height.*/
 html, body {
   background-color:#292929;
   height: 100%;
 }
 
+/* Aligns the website to the center and makes the font white, and changes the font to ubuntu, and uses a sans-serif alternative, in case it can't access the specified font.*/
 body {
-  /* This centers our contens vertically. */
   align-items: center;
   color: white;
   display: flex;
   font-family: ubuntu, sans-serif;
-  /* This centers our sketch horizontally. */
   justify-content: center;
   margin: 0;
 }
 
+/* Makes the font for h1 48px and positions it 20px below the top of the page.*/
 h1 {
   font-size: 48px;
   left:auto;
@@ -26,36 +28,42 @@ h1 {
   top:-20px;
 }
 
+/* Positions the volumeControls just below the ancestor.*/
 #volControls {
   font-size: 14px;
   position: absolute;
   top: 100%;
 }
 
+/* Positions the volumeText 86px below the ancestor and 140px to the left of the centrum of the ancenstor. */
 #volText {
   left:-140px;
   position: absolute;
   top:-86px;
 }
 
+/* Positions the volumeSlider 85 pixels to the left of the centrum of the ancestor and 75 pixels below.*/
 #volSlider {
   left:-85px;
   position: absolute;
   top:-75px;
 }
 
+/* Adds a 2px wide white border to the game-frame. */
 #defaultCanvas0 {
   border-style: solid;
   border-width: 2px;
   color: white;
 }
 
+/* Makes the reset button 200px wide.*/
 #resetButtonDiv {
   position: absolute;
   top: 100%;
   width: 200px;
 }
 
+/* Positions the resetButton 50 pixels below the ancestor. */
 #resetButton {
   position: absolute;
   top: -50px;
